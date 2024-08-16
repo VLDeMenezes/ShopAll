@@ -1,0 +1,1 @@
+This is a E-Comerce project, it has two public views, and another two private's views, also has modals to login and sign in. Has conection to backend for Auth, show products, create an order and get user's data and orders. It has and toggle theme (ligth | dark) too.

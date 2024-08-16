@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "material-icons/iconfont/material-icons.css";
+
+.material-icons.blue {
+  color: #10b981;
+  color: #1f2937;
+  color: #1e3a8a;
+}
+
+.swiper-slide-flex {
+  display: flex !important;
+}
+.material-icons.white {
+  color: #a5a7cc;
+}
+.material-icons.red {
+  color: red;
+}
+.arrow {
+  display: block;
+  animation: moveDown 1s infinite;
+}
+
+.logo {
+  animation: moveTruck 3s infinite;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveTruck {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(45px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  background-color: white;
+  color: dark;
+}
+
+.dark {
+  color: white;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.basicTheme {
+  @apply text-basicColor  bg-primaryColor border-borderColor;
+  @apply dark:text-basicColor dark:bg-secondaryColor;
+}
+
+.hov {
+  @apply dark:hover:text-hoverColor;
+  @apply hover:text-blackColor;
+  /* @apply text-borderColor; */
+}
+
+.basicView {
+  @apply container  my-5 mx-auto bg-slate-600 text-center  flex flex-col;
+}

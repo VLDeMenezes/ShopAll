@@ -1,0 +1,3 @@
+userAgent: "*",
+allow: "/",
+disallow: "/user",
